@@ -31,9 +31,8 @@ export class CounterComponent implements OnInit {
           this.value = this.set
         }
 
-           this.count = true
+          this.count = true;
           this.countUp ? this.value += this.step : this.value -= this.step
-       
         
       }
       )
@@ -41,8 +40,7 @@ export class CounterComponent implements OnInit {
     }
 
     changeUp(upOrDow: boolean){
-      this.countUp = upOrDow;
-      console.log(this.countUp)
+      this.countUp = upOrDow; 
     }
 
     pause(){
@@ -57,14 +55,13 @@ export class CounterComponent implements OnInit {
     }
     
     changeSet( event: any ){
-      console.log( 'hola', event.target.value)
+     
       this.value = parseInt(event.target.value)
 
     }
 
     changeStep( event: any ){
-      console.log('hola');
-      
+ 
       this.step = parseInt(event.target.value)
 
     }
