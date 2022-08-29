@@ -51,7 +51,9 @@ export class CounterComponent implements OnInit {
 
     reset(){
       this.value = 0;
-      this.step = 1
+      this.step = 1;
+      this.set = 0;
+      this.count = false
     }
     
     changeSet( event: any ){
