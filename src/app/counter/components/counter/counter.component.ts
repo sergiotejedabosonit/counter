@@ -7,9 +7,10 @@ import { interval, Subject, takeUntil } from 'rxjs';
 })
 export class CounterComponent implements OnInit {
 
-    count: boolean = true;
+    count: boolean = false;
     countUp: boolean = true;
     value: number = 0;
+    set: number = 0;
     speed: number = 1000
     step: number = 1
  
@@ -21,12 +22,18 @@ export class CounterComponent implements OnInit {
      
       this.intervalTimer
       .pipe(
+   
         takeUntil(this._pause$)
+
       )
       .subscribe( () => { 
-        if(this.count){
-          this.countUp ? this.value += this.step : this.value -= this.step
+        if(!this.count){
+          this.value = this.set
         }
+
+           this.count = true
+          this.countUp ? this.value += this.step : this.value -= this.step
+       
         
       }
       )
