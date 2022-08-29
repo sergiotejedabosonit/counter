@@ -48,12 +48,13 @@ export class CounterComponent implements OnInit {
     }
     
     changeSet( event: any ){
-      console.log(typeof event.target.value)
+      console.log( 'hola', event.target.value)
       this.value = parseInt(event.target.value)
 
     }
 
     changeStep( event: any ){
+      console.log('hola');
       
       this.step = parseInt(event.target.value)
 

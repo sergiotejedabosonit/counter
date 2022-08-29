@@ -34,7 +34,7 @@
             <h5>Set to</h5>
             <div class="div mb-2">
 
-            <p-inputNumber type="number" (change)="changeSet($event)"   [ngModel]="0" [showButtons]="true" buttonLayout="horizontal" spinnerMode="vertical" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" > </p-inputNumber>
+            <p-inputNumber type="number"    [(ngModel)]="value" [showButtons]="true" buttonLayout="horizontal" spinnerMode="vertical" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"  > </p-inputNumber>
 
             </div>
         </div>
@@ -42,7 +42,7 @@
         <div class="row">
             <h5>Step</h5>
             <div class="div">
-                <p-inputNumber type="number" (change)="changeStep($event)" [(ngModel)]="step" [showButtons]="true" buttonLayout="horizontal" spinnerMode="vertical" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" ></p-inputNumber>
+                <p-inputNumber type="number"   [(ngModel)]="step" [showButtons]="true" buttonLayout="horizontal" spinnerMode="vertical" decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" ></p-inputNumber>
              
 
             </div>
